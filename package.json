@@ -1,0 +1,23 @@
+{
+  "name": "tareasemanasiete_backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Backend para api Tarea en MEVN",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seed:import" : "node data/seed.js --import",
+    "seed:destroy" : "node data/seed.js --destroy"
+    
+
+  },
+  "author": "Eduardo Lara",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
