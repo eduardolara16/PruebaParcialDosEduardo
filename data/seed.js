@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 import { db } from '../config/db.js'
 import Services from '../models/Services.js'
-import { services } from './studentServices.js'
+import { services } from './polizasServices.js'
 
 dotenv.config()
 

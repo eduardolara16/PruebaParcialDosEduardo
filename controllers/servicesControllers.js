@@ -1,12 +1,10 @@
-// se puede eliminar esta linea de abajo
-
-import { services } from '../data/studentServices.js'
+import { services } from '../data/polizasServices.js'
 import Services from '../models/Services.js'
 import { validateObjectId, handleNotFoundError } from '../utils/index.js'
 
 //crear servicio
 const createService = async (req, res) => {
-    if(!Object.values(req.body).includes('')){
+    if(Object.values(req.body).includes('')){
         const error = new Error('Todos los campos son obligatorios')
         return res.status(400).json({
             msg: error.message
@@ -69,8 +67,10 @@ const updateService = async (req, res) => {
     }
 
     //nuevos valores al escribir
-    service.name = req.body.name || service.name
-    service.age = req.body.age || service.age
+    service.numeroPoliza = req.body.numeroPoliza || service.numeroPoliza
+    service.tipoSeguro = req.body.tipoSeguro || service.tipoSeguro
+    service.titular = req.body.titular || service.titular
+    service.monto = req.body.monto || service.monto
 
     try {
         await service.save()
